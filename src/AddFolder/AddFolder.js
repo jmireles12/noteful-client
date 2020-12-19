@@ -10,7 +10,7 @@ export default class AddFolder extends Component {
       push: () => { }
     },
   }
-  static contextType = ApiContext;
+  static contextType = ApiContext
 
   handleSubmit = e => {
     e.preventDefault()
