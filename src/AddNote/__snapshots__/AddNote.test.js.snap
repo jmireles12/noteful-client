@@ -11,6 +11,10 @@ exports[`AddNote component renders the complete form 1`] = `
     onSubmit={[Function]}
   >
     <div
+      className="Noteful__error"
+      role="alert"
+    />
+    <div
       className="field"
     >
       <label
@@ -21,6 +25,7 @@ exports[`AddNote component renders the complete form 1`] = `
       <input
         id="note-name-input"
         name="note-name"
+        onChange={[Function]}
         type="text"
       />
     </div>
@@ -35,6 +40,7 @@ exports[`AddNote component renders the complete form 1`] = `
       <textarea
         id="note-content-input"
         name="note-content"
+        onChange={[Function]}
       />
     </div>
     <div
@@ -48,7 +54,9 @@ exports[`AddNote component renders the complete form 1`] = `
       <select
         id="note-folder-select"
         name="note-folder-id"
+        onChange={[Function]}
       >
+        &gt;
         <option
           value={null}
         >

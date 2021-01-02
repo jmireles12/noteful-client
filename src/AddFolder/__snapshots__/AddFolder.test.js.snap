@@ -11,6 +11,10 @@ exports[`AddItemForm component renders the complete form 1`] = `
     onSubmit={[Function]}
   >
     <div
+      className="Noteful__error"
+      role="alert"
+    />
+    <div
       className="field"
     >
       <label
