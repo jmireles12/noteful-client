@@ -27,9 +27,9 @@ export default class Note extends React.Component {
       body: JSON.stringify(noteId),
     })
       .then(res => {
-        if (!res.ok)
-          return res.json().then(e => Promise.reject(e))
-        return res.json()
+        if (!res.ok) {
+          throw new Error(res.statusText)
+        }
       })
       .then(res => {
         this.context.deleteNote(noteId)
@@ -37,7 +37,7 @@ export default class Note extends React.Component {
         this.props.onDeleteNote(noteId)
       })
       .catch(error => {
-        console.error({ error })
+        console.error(error)
       })
   }
 
