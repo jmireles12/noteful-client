@@ -5,6 +5,12 @@ exports[`NotePageMain component renders a .NotePageMain by default 1`] = `
   className="NotePageMain"
 >
   <Note
+    handleClickDelete={[Function]}
+    match={
+      Object {
+        "params": Object {},
+      }
+    }
     onDeleteNote={[Function]}
   />
   <div

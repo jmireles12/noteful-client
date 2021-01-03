@@ -56,7 +56,6 @@ exports[`AddNote component renders the complete form 1`] = `
         name="note-folder-id"
         onChange={[Function]}
       >
-        &gt;
         <option
           value={null}
         >

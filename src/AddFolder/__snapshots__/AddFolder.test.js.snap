@@ -11,10 +11,6 @@ exports[`AddItemForm component renders the complete form 1`] = `
     onSubmit={[Function]}
   >
     <div
-      className="Noteful__error"
-      role="alert"
-    />
-    <div
       className="field"
     >
       <label
@@ -25,8 +21,12 @@ exports[`AddItemForm component renders the complete form 1`] = `
       <input
         id="folder-name-input"
         name="folder-name"
+        onChange={[Function]}
         type="text"
       />
+      <div>
+        <p />
+      </div>
     </div>
     <div
       className="buttons"
