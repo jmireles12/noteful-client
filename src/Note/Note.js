@@ -17,7 +17,6 @@ export default class Note extends React.Component {
   static contextType = ApiContext;
 
   handleClickDelete = e => {
-    e.preventDefault()
     const noteId = this.props.id
     fetch(`${config.API_ENDPOINT}/notes/` + noteId, {
       method: 'DELETE',

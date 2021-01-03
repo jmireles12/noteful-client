@@ -44,10 +44,7 @@ export default class AddNote extends Component {
 
   handleSubmit = e => {
     e.preventDefault()
-
-    const {name, content, folderid} = e.target;
-
-    const newNote = {
+    const note = {
       name: e.target['note-name'].value,
       content: e.target['note-content'].value,
       folderid: e.target['note-folder-id'].value,
@@ -61,7 +58,7 @@ export default class AddNote extends Component {
       headers: {
         'content-type': 'application/json'
       },
-      body: JSON.stringify(newNote),
+      body: JSON.stringify(note),
     })
       .then(res => {
         if (!res.ok)
@@ -69,9 +66,9 @@ export default class AddNote extends Component {
         return res.json()
       })
       .then(note => {
-        name.value = ''
+        /* name.value = ''
         content.value = ''
-        folderid.value = ''
+        folderid.value = '' */
         this.context.addNote(note)
         this.props.history.push(`/folder/${note.folderid}`)
       })
@@ -133,7 +130,7 @@ export default class AddNote extends Component {
             <label htmlFor='note-folder-select'>
               Folder
             </label>
-            <select id='note-folder-select' name='note-folder-id' onChange={e => this.updateFolderSelected(e.target.value)}>>
+            <select id='note-folder-select' name='note-folder-id' onChange={e => this.updateFolderSelected(e.target.value)}>
               <option value={null}>...</option>
               {folders.map(folder =>
                 <option key={folder.id} value={folder.id}>
